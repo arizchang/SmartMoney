@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4FEA6B254F68CD0003B07F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA6A254F68CD0003B07F /* MainViewController.swift */; };
+		CE4FEA6D254F69B40003B07F /* EditGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA6C254F69B40003B07F /* EditGoalsViewController.swift */; };
+		CE4FEA6F254F69DA0003B07F /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA6E254F69DA0003B07F /* PaymentsViewController.swift */; };
+		CE4FEA71254F69E40003B07F /* BankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA70254F69E40003B07F /* BankViewController.swift */; };
+		CE4FEA73254F69EF0003B07F /* StocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA72254F69EF0003B07F /* StocksViewController.swift */; };
 		CE53736B254F3C97000F2473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53736A254F3C97000F2473 /* AppDelegate.swift */; };
 		CE53736D254F3C97000F2473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53736C254F3C97000F2473 /* SceneDelegate.swift */; };
 		CE53736F254F3C97000F2473 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53736E254F3C97000F2473 /* ViewController.swift */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE4FEA6A254F68CD0003B07F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CE4FEA6C254F69B40003B07F /* EditGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalsViewController.swift; sourceTree = "<group>"; };
+		CE4FEA6E254F69DA0003B07F /* PaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
+		CE4FEA70254F69E40003B07F /* BankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewController.swift; sourceTree = "<group>"; };
+		CE4FEA72254F69EF0003B07F /* StocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewController.swift; sourceTree = "<group>"; };
 		CE537367254F3C97000F2473 /* SmartMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE53736A254F3C97000F2473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE53736C254F3C97000F2473 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +76,11 @@
 				CE53736C254F3C97000F2473 /* SceneDelegate.swift */,
 				CE53736E254F3C97000F2473 /* ViewController.swift */,
 				CE537370254F3C97000F2473 /* Main.storyboard */,
+				CE4FEA6E254F69DA0003B07F /* PaymentsViewController.swift */,
+				CE4FEA70254F69E40003B07F /* BankViewController.swift */,
+				CE4FEA72254F69EF0003B07F /* StocksViewController.swift */,
+				CE4FEA6C254F69B40003B07F /* EditGoalsViewController.swift */,
+				CE4FEA6A254F68CD0003B07F /* MainViewController.swift */,
 				CE537383254F44D2000F2473 /* LogInViewController.swift */,
 				CE537381254F4433000F2473 /* CreateAccountViewController.swift */,
 				CE537376254F3C98000F2473 /* Assets.xcassets */,
@@ -147,11 +162,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4FEA6B254F68CD0003B07F /* MainViewController.swift in Sources */,
+				CE4FEA73254F69EF0003B07F /* StocksViewController.swift in Sources */,
 				CE537382254F4433000F2473 /* CreateAccountViewController.swift in Sources */,
 				CE53736F254F3C97000F2473 /* ViewController.swift in Sources */,
+				CE4FEA6D254F69B40003B07F /* EditGoalsViewController.swift in Sources */,
 				CE537384254F44D2000F2473 /* LogInViewController.swift in Sources */,
 				CE53736B254F3C97000F2473 /* AppDelegate.swift in Sources */,
+				CE4FEA6F254F69DA0003B07F /* PaymentsViewController.swift in Sources */,
 				CE537375254F3C97000F2473 /* SmartMoney.xcdatamodeld in Sources */,
+				CE4FEA71254F69E40003B07F /* BankViewController.swift in Sources */,
 				CE53736D254F3C97000F2473 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
