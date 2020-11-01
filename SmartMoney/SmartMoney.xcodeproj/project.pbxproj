@@ -14,6 +14,8 @@
 		CE537375254F3C97000F2473 /* SmartMoney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE537373254F3C97000F2473 /* SmartMoney.xcdatamodeld */; };
 		CE537377254F3C98000F2473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE537376254F3C98000F2473 /* Assets.xcassets */; };
 		CE53737A254F3C98000F2473 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE537378254F3C98000F2473 /* LaunchScreen.storyboard */; };
+		CE537382254F4433000F2473 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE537381254F4433000F2473 /* CreateAccountViewController.swift */; };
+		CE537384254F44D2000F2473 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE537383254F44D2000F2473 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CE537376254F3C98000F2473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE537379254F3C98000F2473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE53737B254F3C98000F2473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE537381254F4433000F2473 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		CE537383254F44D2000F2473 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				CE53736C254F3C97000F2473 /* SceneDelegate.swift */,
 				CE53736E254F3C97000F2473 /* ViewController.swift */,
 				CE537370254F3C97000F2473 /* Main.storyboard */,
+				CE537383254F44D2000F2473 /* LogInViewController.swift */,
+				CE537381254F4433000F2473 /* CreateAccountViewController.swift */,
 				CE537376254F3C98000F2473 /* Assets.xcassets */,
 				CE537378254F3C98000F2473 /* LaunchScreen.storyboard */,
 				CE53737B254F3C98000F2473 /* Info.plist */,
@@ -141,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE537382254F4433000F2473 /* CreateAccountViewController.swift in Sources */,
 				CE53736F254F3C97000F2473 /* ViewController.swift in Sources */,
+				CE537384254F44D2000F2473 /* LogInViewController.swift in Sources */,
 				CE53736B254F3C97000F2473 /* AppDelegate.swift in Sources */,
 				CE537375254F3C97000F2473 /* SmartMoney.xcdatamodeld in Sources */,
 				CE53736D254F3C97000F2473 /* SceneDelegate.swift in Sources */,
