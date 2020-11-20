@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var userModel:UserModel?
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        userModel = UserModel(managedObjectContext)
+        print(userModel!.getCount())
+        //let image = UIImage(named: "blankProfilePic.png")?.pngData()
+        //userModel?.add("arizchang", "1234", image!)
     }
 
 

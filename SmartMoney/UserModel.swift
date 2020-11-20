@@ -7,7 +7,33 @@
 //
 
 import Foundation
+import CoreData
 
 class UserModel {
     
+    let managedObjectContext:NSManagedObjectContext
+    var userList = [User]()
+    
+    init(_ context: NSManagedObjectContext) {
+        managedObjectContext = context
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        userList = ((try? managedObjectContext.fetch(fetchRequest)) as? [User])!
+    }
+    
+    func getCount() -> Int {
+        return userList.count
+    }
+    
+    func add(_ username: String, _ password: String, _ picture: Data) {
+        let ent = NSEntityDescription.entity(forEntityName: "User", in: self.managedObjectContext)
+        let newUser = User(entity: ent!, insertInto: self.managedObjectContext)
+        newUser.username = username
+        newUser.password = password
+        newUser.picture = picture
+        
+        do {
+            try managedObjectContext.save()
+        } catch {}
+        print(newUser)
+    }
 }
