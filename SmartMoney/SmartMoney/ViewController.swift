@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         userModel = UserModel(managedObjectContext)
         print(userModel!.getCount())
-        //let image = UIImage(named: "blankProfilePic.png")?.pngData()
-        //userModel?.add("arizchang", "1234", image!)
+        let image = UIImage(named: "blankProfilePic.png")?.pngData()
+        userModel?.add("arizchang", "1234", image!)
     }
 
 

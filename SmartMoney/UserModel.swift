@@ -25,15 +25,30 @@ class UserModel {
     }
     
     func add(_ username: String, _ password: String, _ picture: Data) {
-        let ent = NSEntityDescription.entity(forEntityName: "User", in: self.managedObjectContext)
-        let newUser = User(entity: ent!, insertInto: self.managedObjectContext)
-        newUser.username = username
-        newUser.password = password
-        newUser.picture = picture
-        
-        do {
-            try managedObjectContext.save()
-        } catch {}
-        print(newUser)
+        if !isDuplicate(username) {
+            let ent = NSEntityDescription.entity(forEntityName: "User", in: self.managedObjectContext)
+            let newUser = User(entity: ent!, insertInto: self.managedObjectContext)
+            newUser.username = username
+            newUser.password = password
+            newUser.picture = picture
+            
+            do {
+                try managedObjectContext.save()
+            } catch {}
+            print(newUser)
+        }
+        else {
+            print("That username is taken!")
+        }
+
+    }
+    
+    func isDuplicate(_ username: String) -> Bool {
+        for user in userList {
+            if username == user.username {
+                return true
+            }
+        }
+        return false
     }
 }
