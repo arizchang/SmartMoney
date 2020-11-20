@@ -12,6 +12,9 @@
 		CE4FEA6F254F69DA0003B07F /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA6E254F69DA0003B07F /* PaymentsViewController.swift */; };
 		CE4FEA71254F69E40003B07F /* BankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA70254F69E40003B07F /* BankViewController.swift */; };
 		CE4FEA73254F69EF0003B07F /* StocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA72254F69EF0003B07F /* StocksViewController.swift */; };
+		CE524745256740C1007D5D3E /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE524743256740C1007D5D3E /* User+CoreDataClass.swift */; };
+		CE524746256740C1007D5D3E /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE524744256740C1007D5D3E /* User+CoreDataProperties.swift */; };
+		CE52474A256741B7007D5D3E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE524749256741B7007D5D3E /* UserModel.swift */; };
 		CE53736B254F3C97000F2473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53736A254F3C97000F2473 /* AppDelegate.swift */; };
 		CE53736D254F3C97000F2473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53736C254F3C97000F2473 /* SceneDelegate.swift */; };
 		CE53736F254F3C97000F2473 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53736E254F3C97000F2473 /* ViewController.swift */; };
@@ -29,6 +32,9 @@
 		CE4FEA6E254F69DA0003B07F /* PaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
 		CE4FEA70254F69E40003B07F /* BankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewController.swift; sourceTree = "<group>"; };
 		CE4FEA72254F69EF0003B07F /* StocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewController.swift; sourceTree = "<group>"; };
+		CE524743256740C1007D5D3E /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE524744256740C1007D5D3E /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE524749256741B7007D5D3E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		CE537367254F3C97000F2473 /* SmartMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE53736A254F3C97000F2473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE53736C254F3C97000F2473 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,9 @@
 		CE53735E254F3C97000F2473 = {
 			isa = PBXGroup;
 			children = (
+				CE524749256741B7007D5D3E /* UserModel.swift */,
+				CE524743256740C1007D5D3E /* User+CoreDataClass.swift */,
+				CE524744256740C1007D5D3E /* User+CoreDataProperties.swift */,
 				CE537369254F3C97000F2473 /* SmartMoney */,
 				CE537368254F3C97000F2473 /* Products */,
 			);
@@ -164,13 +173,16 @@
 			files = (
 				CE4FEA6B254F68CD0003B07F /* MainViewController.swift in Sources */,
 				CE4FEA73254F69EF0003B07F /* StocksViewController.swift in Sources */,
+				CE524745256740C1007D5D3E /* User+CoreDataClass.swift in Sources */,
 				CE537382254F4433000F2473 /* CreateAccountViewController.swift in Sources */,
 				CE53736F254F3C97000F2473 /* ViewController.swift in Sources */,
 				CE4FEA6D254F69B40003B07F /* EditGoalsViewController.swift in Sources */,
 				CE537384254F44D2000F2473 /* LogInViewController.swift in Sources */,
 				CE53736B254F3C97000F2473 /* AppDelegate.swift in Sources */,
+				CE52474A256741B7007D5D3E /* UserModel.swift in Sources */,
 				CE4FEA6F254F69DA0003B07F /* PaymentsViewController.swift in Sources */,
 				CE537375254F3C97000F2473 /* SmartMoney.xcdatamodeld in Sources */,
+				CE524746256740C1007D5D3E /* User+CoreDataProperties.swift in Sources */,
 				CE4FEA71254F69E40003B07F /* BankViewController.swift in Sources */,
 				CE53736D254F3C97000F2473 /* SceneDelegate.swift in Sources */,
 			);
