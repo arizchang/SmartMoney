@@ -24,10 +24,18 @@ class UserModel {
         return userList.count
     }
     
+    func getUser(_ name: String) -> User? {
+        for user in userList {
+            if name == user.username {
+                return user
+            }
+        }
+        return nil
+    }
+    
     func add(_ username: String, _ password: String, _ picture: Data) {
         if !isDuplicate(username) {
-            let ent = NSEntityDescription.entity(forEntityName: "User", in: self.managedObjectContext)
-            let newUser = User(entity: ent!, insertInto: self.managedObjectContext)
+            let newUser = User(context: self.managedObjectContext)
             newUser.username = username
             newUser.password = password
             newUser.picture = picture
