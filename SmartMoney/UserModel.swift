@@ -33,7 +33,7 @@ class UserModel {
         return nil
     }
     
-    func add(_ username: String, _ password: String, _ picture: Data) {
+    func add(_ username: String, _ password: String, _ picture: Data) -> User? {
         if !isDuplicate(username) {
             let newUser = User(context: self.managedObjectContext)
             newUser.username = username
@@ -44,9 +44,11 @@ class UserModel {
                 try managedObjectContext.save()
             } catch {}
             print(newUser)
+            return newUser
         }
         else {
             print("That username is taken!")
+            return nil
         }
 
     }

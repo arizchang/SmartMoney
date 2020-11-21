@@ -77,7 +77,8 @@
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4PY-TC-mFX" kind="show" id="maz-z1-Vni"/>
+                                    <action selector="create:" destination="biA-kz-pjS" eventType="touchUpInside" id="eST-hn-6pi"/>
+                                    <segue destination="4PY-TC-mFX" kind="show" identifier="fromCreateToMain" id="maz-z1-Vni"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2y5-HD-FyD">
@@ -108,6 +109,13 @@
                                     <action selector="changeProfilePic:" destination="biA-kz-pjS" eventType="touchUpInside" id="R51-aE-L3R"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1E-ON-0F4">
+                                <rect key="frame" x="74" y="478" width="267" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="COd-x9-RaQ"/>
@@ -117,6 +125,7 @@
                         <outlet property="passwordField" destination="2y5-HD-FyD" id="HCd-yH-cLT"/>
                         <outlet property="profilePic" destination="38o-sp-mXf" id="5xg-Ab-O1z"/>
                         <outlet property="usernameField" destination="4i3-Vl-dei" id="VsD-hX-VRs"/>
+                        <outlet property="warningLabel" destination="T1E-ON-0F4" id="IEg-ne-4F3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lW-rk-Bgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
