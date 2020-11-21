@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
-class BankViewController: UIViewController {
+class BankViewController: UIViewController, CLLocationManagerDelegate {
 
+    var manager:CLLocationManager!
+    var lat:Double?
+    var long:Double?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        CLGeocoder().geocodeAddressString(<#T##addressString: String##String#>, completionHandler: <#T##CLGeocodeCompletionHandler##CLGeocodeCompletionHandler##([CLPlacemark]?, Error?) -> Void#>)
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0]
+        lat = userLocation.coordinate.latitude
+        long = userLocation.coordinate.longitude
+        print("\(lat!), \(long!)")
     }
-    */
-
 }
