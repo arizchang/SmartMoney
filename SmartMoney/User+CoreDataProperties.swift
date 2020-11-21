@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  SmartMoney
 //
-//  Created by Ariz Chang on 11/19/20.
+//  Created by Ariz Chang on 11/21/20.
 //  Copyright © 2020 Ariz Chang. All rights reserved.
 //
 //
@@ -17,8 +17,8 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var username: String?
     @NSManaged public var password: String?
     @NSManaged public var picture: Data?
+    @NSManaged public var username: String?
 
 }

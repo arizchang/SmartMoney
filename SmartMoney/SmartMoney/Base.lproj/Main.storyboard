@@ -148,6 +148,7 @@
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="logIn:" destination="wyi-yr-VCf" eventType="touchUpInside" id="cJX-iX-SY4"/>
                                     <segue destination="4PY-TC-mFX" kind="show" id="dgH-Jg-nGS"/>
                                 </connections>
                             </button>
@@ -172,11 +173,23 @@
                                 <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYe-fc-H1n">
+                                <rect key="frame" x="74" y="378" width="267" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Axd-EJ-pta"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jp3-ep-T16"/>
+                    <connections>
+                        <outlet property="passwordField" destination="NWH-qW-33n" id="vNi-sZ-U8h"/>
+                        <outlet property="usernameField" destination="P3N-Bu-7zW" id="rdz-z4-7OR"/>
+                        <outlet property="warningLabel" destination="dYe-fc-H1n" id="9ey-i5-LkF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pab-2K-GAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -458,6 +471,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="maz-z1-Vni"/>
+        <segue reference="dgH-Jg-nGS"/>
     </inferredMetricsTieBreakers>
 </document>

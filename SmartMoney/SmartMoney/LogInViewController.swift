@@ -10,23 +10,27 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var warningLabel: UILabel!
+    var user:User?
     var userModel:UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func logIn(_ sender: UIButton) {
+        let username = usernameField.text
+        let password = passwordField.text
+        user = userModel?.getUserWithPassword(username!, password!)
+        if user == nil {
+            warningLabel.text = "Wrong username or password"
+        }
     }
-    */
-
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return user != nil
+    }
 }

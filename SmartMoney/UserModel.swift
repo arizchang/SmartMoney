@@ -33,6 +33,16 @@ class UserModel {
         return nil
     }
     
+    func getUserWithPassword(_ name: String, _ password: String) -> User? {
+        let user = getUser(name)
+        if password == user?.password {
+            return user
+        }
+        else {
+            return nil
+        }
+    }
+    
     func add(_ username: String, _ password: String, _ picture: Data) -> User? {
         if !isDuplicate(username) {
             let newUser = User(context: self.managedObjectContext)
