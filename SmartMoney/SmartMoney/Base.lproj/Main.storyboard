@@ -149,7 +149,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logIn:" destination="wyi-yr-VCf" eventType="touchUpInside" id="cJX-iX-SY4"/>
-                                    <segue destination="4PY-TC-mFX" kind="show" id="dgH-Jg-nGS"/>
+                                    <segue destination="4PY-TC-mFX" kind="show" identifier="fromLogToMain" id="dgH-Jg-nGS"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWH-qW-33n">
@@ -229,7 +229,7 @@
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TQ3-qS-eEZ" kind="show" id="Wlx-fa-lAu"/>
+                                    <segue destination="TQ3-qS-eEZ" kind="show" identifier="toPayments" id="Wlx-fa-lAu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Budget Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rx-kd-CVm">

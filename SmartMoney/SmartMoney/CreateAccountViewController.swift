@@ -57,4 +57,13 @@ class CreateAccountViewController: UIViewController, UIImagePickerControllerDele
         return newUser != nil
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "fromCreateToMain") {
+            if let viewController: MainViewController = segue.destination as? MainViewController {
+                viewController.userModel = userModel
+            }
+        }
+    }
+    
 }

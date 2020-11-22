@@ -33,4 +33,14 @@ class LogInViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return user != nil
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "fromLogToMain") {
+            if let viewController: MainViewController = segue.destination as? MainViewController {
+                viewController.userModel = userModel
+            }
+        }
+    }
+    
 }

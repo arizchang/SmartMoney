@@ -63,6 +63,14 @@ class UserModel {
 
     }
     
+    func remove(_ user: User) {
+        managedObjectContext.delete(user)
+        
+        do {
+            try managedObjectContext.save()
+        } catch {}
+    }
+    
     func isDuplicate(_ username: String) -> Bool {
         for user in userList {
             if username == user.username {

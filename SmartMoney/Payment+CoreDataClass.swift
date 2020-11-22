@@ -1,5 +1,5 @@
 //
-//  User+CoreDataClass.swift
+//  Payment+CoreDataClass.swift
 //  SmartMoney
 //
 //  Created by Ariz Chang on 11/22/20.
@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 
-public class User: NSManagedObject {
+public class Payment: NSManagedObject {
 
 }
