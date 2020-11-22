@@ -10,6 +10,10 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var category1Label: UILabel!
+    @IBOutlet weak var category2Label: UILabel!
+    @IBOutlet weak var category3Label: UILabel!
+    @IBOutlet weak var category4Label: UILabel!
     var user:User?
     var userModel:UserModel?
     
