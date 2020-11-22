@@ -29,6 +29,17 @@ class PaymentsViewController: UIViewController, UITableViewDelegate, UITableView
         
         userModel?.addPaymentToUser(user!, category!, amount!)
         print(user?.paymentList)
+        categoryField.text = ""
+        amountField.text = ""
+        paymentTable.reloadData()
+    }
+    
+    
+    @IBAction func clearPayments(_ sender: UIBarButtonItem) {
+        for payment in user!.paymentList! {
+            user!.removeFromPaymentList(payment as! Payment)
+        }
+        
         paymentTable.reloadData()
     }
     
@@ -41,11 +52,10 @@ class PaymentsViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = paymentTable.dequeueReusableCell(withIdentifier: "paymentCell", for: indexPath)
         cell.layer.borderWidth = 1.0
         let paymentsArray = user?.paymentList?.allObjects
-        let category = (paymentsArray![indexPath.row] as AnyObject).category
-        print(category)
-        //cell.textLabel?.text = "\(paymentsArray![indexPath.row].category): $\(paymentsArray![indexPath.row].amount)"
-        
-        cell.textLabel?.text = "test"
+        let category = (paymentsArray![indexPath.row] as AnyObject).category!
+        let amount = (paymentsArray![indexPath.row] as AnyObject).amount!
+
+        cell.textLabel?.text = "\(category!): $\(amount)"
         
         return cell
     }
