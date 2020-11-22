@@ -10,6 +10,9 @@ import UIKit
 
 class PaymentsViewController: UIViewController {
 
+    @IBOutlet weak var categoryField: UITextField!
+    @IBOutlet weak var amountField: UITextField!
+    var user:User?
     var userModel:UserModel?
     
     override func viewDidLoad() {
@@ -17,5 +20,12 @@ class PaymentsViewController: UIViewController {
 
     }
 
-
+    @IBAction func addPayment(_ sender: UIButton) {
+        let category = categoryField.text
+        let amount = Double(amountField.text!)
+        
+        userModel?.addPaymentToUser(user!, category!, amount!)
+        print(user?.paymentList)
+    }
+    
 }

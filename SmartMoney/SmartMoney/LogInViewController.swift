@@ -39,6 +39,7 @@ class LogInViewController: UIViewController {
         if(segue.identifier == "fromLogToMain") {
             if let viewController: MainViewController = segue.destination as? MainViewController {
                 viewController.userModel = userModel
+                viewController.user = user
             }
         }
     }

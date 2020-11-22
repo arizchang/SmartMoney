@@ -292,6 +292,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPayment:" destination="TQ3-qS-eEZ" eventType="touchUpInside" id="BJo-Ov-2fG"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Payment Amount" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="348-Lu-Onn">
                                 <rect key="frame" x="122" y="535" width="171" height="34"/>
@@ -326,6 +329,10 @@
                     <navigationItem key="navigationItem" id="bvz-43-A6a">
                         <barButtonItem key="rightBarButtonItem" title="Clear" id="A4o-vJ-V6j"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="amountField" destination="348-Lu-Onn" id="qu0-pT-tTP"/>
+                        <outlet property="categoryField" destination="2rx-Fq-Cen" id="cb6-7m-Xy4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fai-j6-B25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

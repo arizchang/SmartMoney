@@ -79,4 +79,13 @@ class UserModel {
         }
         return false
     }
+    
+    func addPaymentToUser(_ user:User, _ category:String, _ amount: Double) {
+        var payment = Payment(context: managedObjectContext)
+        payment.amount = amount
+        payment.category = category
+        user.addToPaymentList(payment)
+        
+        try! managedObjectContext.save()
+    }
 }

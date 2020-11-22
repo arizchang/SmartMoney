@@ -62,6 +62,7 @@ class CreateAccountViewController: UIViewController, UIImagePickerControllerDele
         if(segue.identifier == "fromCreateToMain") {
             if let viewController: MainViewController = segue.destination as? MainViewController {
                 viewController.userModel = userModel
+                viewController.user = newUser
             }
         }
     }

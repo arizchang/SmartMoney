@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    var user:User?
     var userModel:UserModel?
     
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class MainViewController: UIViewController {
         if(segue.identifier == "toPayments") {
             if let viewController: PaymentsViewController = segue.destination as? PaymentsViewController {
                 viewController.userModel = userModel
+                viewController.user = user
             }
         }
     }
