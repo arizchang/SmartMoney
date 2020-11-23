@@ -23,10 +23,12 @@
 		CE53737A254F3C98000F2473 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE537378254F3C98000F2473 /* LaunchScreen.storyboard */; };
 		CE537382254F4433000F2473 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE537381254F4433000F2473 /* CreateAccountViewController.swift */; };
 		CE537384254F44D2000F2473 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE537383254F44D2000F2473 /* LogInViewController.swift */; };
-		CE579503256ADC450037DA2F /* Payment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5794FF256ADC450037DA2F /* Payment+CoreDataClass.swift */; };
-		CE579504256ADC450037DA2F /* Payment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE579500256ADC450037DA2F /* Payment+CoreDataProperties.swift */; };
-		CE579505256ADC450037DA2F /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE579501256ADC450037DA2F /* User+CoreDataClass.swift */; };
-		CE579506256ADC450037DA2F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE579502256ADC450037DA2F /* User+CoreDataProperties.swift */; };
+		CE56A9A2256B383F00CF13F1 /* Payment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99C256B383F00CF13F1 /* Payment+CoreDataClass.swift */; };
+		CE56A9A3256B383F00CF13F1 /* Payment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99D256B383F00CF13F1 /* Payment+CoreDataProperties.swift */; };
+		CE56A9A4256B383F00CF13F1 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99E256B383F00CF13F1 /* User+CoreDataClass.swift */; };
+		CE56A9A5256B383F00CF13F1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99F256B383F00CF13F1 /* User+CoreDataProperties.swift */; };
+		CE56A9A6256B383F00CF13F1 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A9A0256B383F00CF13F1 /* Category+CoreDataClass.swift */; };
+		CE56A9A7256B383F00CF13F1 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A9A1256B383F00CF13F1 /* Category+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,10 +50,12 @@
 		CE53737B254F3C98000F2473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE537381254F4433000F2473 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		CE537383254F44D2000F2473 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		CE5794FF256ADC450037DA2F /* Payment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CE579500256ADC450037DA2F /* Payment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE579501256ADC450037DA2F /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CE579502256ADC450037DA2F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE56A99C256B383F00CF13F1 /* Payment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE56A99D256B383F00CF13F1 /* Payment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE56A99E256B383F00CF13F1 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE56A99F256B383F00CF13F1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE56A9A0256B383F00CF13F1 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE56A9A1256B383F00CF13F1 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +72,12 @@
 		CE53735E254F3C97000F2473 = {
 			isa = PBXGroup;
 			children = (
-				CE5794FF256ADC450037DA2F /* Payment+CoreDataClass.swift */,
-				CE579500256ADC450037DA2F /* Payment+CoreDataProperties.swift */,
-				CE579501256ADC450037DA2F /* User+CoreDataClass.swift */,
-				CE579502256ADC450037DA2F /* User+CoreDataProperties.swift */,
+				CE56A99C256B383F00CF13F1 /* Payment+CoreDataClass.swift */,
+				CE56A99D256B383F00CF13F1 /* Payment+CoreDataProperties.swift */,
+				CE56A99E256B383F00CF13F1 /* User+CoreDataClass.swift */,
+				CE56A99F256B383F00CF13F1 /* User+CoreDataProperties.swift */,
+				CE56A9A0256B383F00CF13F1 /* Category+CoreDataClass.swift */,
+				CE56A9A1256B383F00CF13F1 /* Category+CoreDataProperties.swift */,
 				CE524749256741B7007D5D3E /* UserModel.swift */,
 				CE537369254F3C97000F2473 /* SmartMoney */,
 				CE537368254F3C97000F2473 /* Products */,
@@ -182,13 +188,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4FEA6B254F68CD0003B07F /* MainViewController.swift in Sources */,
+				CE56A9A7256B383F00CF13F1 /* Category+CoreDataProperties.swift in Sources */,
 				CE4FEA73254F69EF0003B07F /* StocksViewController.swift in Sources */,
-				CE579506256ADC450037DA2F /* User+CoreDataProperties.swift in Sources */,
-				CE579504256ADC450037DA2F /* Payment+CoreDataProperties.swift in Sources */,
+				CE56A9A6256B383F00CF13F1 /* Category+CoreDataClass.swift in Sources */,
+				CE56A9A5256B383F00CF13F1 /* User+CoreDataProperties.swift in Sources */,
+				CE56A9A3256B383F00CF13F1 /* Payment+CoreDataProperties.swift in Sources */,
 				CE537382254F4433000F2473 /* CreateAccountViewController.swift in Sources */,
 				CE53736F254F3C97000F2473 /* ViewController.swift in Sources */,
 				CE4FEA6D254F69B40003B07F /* EditGoalsViewController.swift in Sources */,
-				CE579503256ADC450037DA2F /* Payment+CoreDataClass.swift in Sources */,
+				CE56A9A2256B383F00CF13F1 /* Payment+CoreDataClass.swift in Sources */,
 				CE537384254F44D2000F2473 /* LogInViewController.swift in Sources */,
 				CE53736B254F3C97000F2473 /* AppDelegate.swift in Sources */,
 				CE52474A256741B7007D5D3E /* UserModel.swift in Sources */,
@@ -196,7 +204,7 @@
 				CE537375254F3C97000F2473 /* SmartMoney.xcdatamodeld in Sources */,
 				CE4FEA71254F69E40003B07F /* BankViewController.swift in Sources */,
 				CE53736D254F3C97000F2473 /* SceneDelegate.swift in Sources */,
-				CE579505256ADC450037DA2F /* User+CoreDataClass.swift in Sources */,
+				CE56A9A4256B383F00CF13F1 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

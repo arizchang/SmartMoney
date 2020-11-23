@@ -21,6 +21,7 @@ extension User {
     @NSManaged public var picture: Data?
     @NSManaged public var username: String?
     @NSManaged public var paymentList: NSSet?
+    @NSManaged public var categoryList: NSSet?
 
 }
 
@@ -38,5 +39,22 @@ extension User {
 
     @objc(removePaymentList:)
     @NSManaged public func removeFromPaymentList(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for categoryList
+extension User {
+
+    @objc(addCategoryListObject:)
+    @NSManaged public func addToCategoryList(_ value: Category)
+
+    @objc(removeCategoryListObject:)
+    @NSManaged public func removeFromCategoryList(_ value: Category)
+
+    @objc(addCategoryList:)
+    @NSManaged public func addToCategoryList(_ values: NSSet)
+
+    @objc(removeCategoryList:)
+    @NSManaged public func removeFromCategoryList(_ values: NSSet)
 
 }
