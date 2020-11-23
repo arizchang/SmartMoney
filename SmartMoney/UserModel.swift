@@ -88,4 +88,25 @@ class UserModel {
         
         try! managedObjectContext.save()
     }
+    
+    func addCategoryToUser(_ user: User, _ name: String, _ limit: Double) {
+        var category = Category(context: managedObjectContext)
+        category.categoryName = name
+        category.limitAmount = limit
+        category.currentAmount = 0.00
+        user.addToCategoryList(category)
+        
+        try! managedObjectContext.save()
+    }
+    
+    func editCategory(_ user: User, _ name: String, _ limit: Double) {
+        for category in user.categoryList! {
+            let theCategory = category as! Category
+            if theCategory.categoryName == name {
+                theCategory.limitAmount = limit
+                
+                try! managedObjectContext.save()
+            }
+        }
+    }
 }

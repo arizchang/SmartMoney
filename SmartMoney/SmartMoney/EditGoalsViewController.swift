@@ -10,21 +10,31 @@ import UIKit
 
 class EditGoalsViewController: UIViewController {
 
+    @IBOutlet weak var setLimitField: UITextField!
+    @IBOutlet weak var addCategoryField: UITextField!
+    @IBOutlet weak var removeCategoryField: UITextField!
+    @IBOutlet weak var editCategoryField: UITextField!
+    @IBOutlet weak var editSetLimitField: UITextField!
+    var user:User?
+    var userModel:UserModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func add(_ sender: UIButton) {
+        let name = addCategoryField.text
+        let limit = Double(setLimitField.text!)
+        userModel?.addCategoryToUser(user!, name!, limit!)
     }
-    */
-
+    
+    
+    @IBAction func remove(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func Edit(_ sender: Any) {
+    }
 }

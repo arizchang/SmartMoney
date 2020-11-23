@@ -19,7 +19,7 @@ extension Category {
 
     @NSManaged public var currentAmount: Double
     @NSManaged public var limitAmount: Double
-    @NSManaged public var name: String?
+    @NSManaged public var categoryName: String?
     @NSManaged public var user: User?
 
 }

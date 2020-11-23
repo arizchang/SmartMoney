@@ -27,8 +27,8 @@
 		CE56A9A3256B383F00CF13F1 /* Payment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99D256B383F00CF13F1 /* Payment+CoreDataProperties.swift */; };
 		CE56A9A4256B383F00CF13F1 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99E256B383F00CF13F1 /* User+CoreDataClass.swift */; };
 		CE56A9A5256B383F00CF13F1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99F256B383F00CF13F1 /* User+CoreDataProperties.swift */; };
-		CE56A9A6256B383F00CF13F1 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A9A0256B383F00CF13F1 /* Category+CoreDataClass.swift */; };
-		CE56A9A7256B383F00CF13F1 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A9A1256B383F00CF13F1 /* Category+CoreDataProperties.swift */; };
+		CE56A9AA256B3FEA00CF13F1 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A9A8256B3FEA00CF13F1 /* Category+CoreDataClass.swift */; };
+		CE56A9AB256B3FEA00CF13F1 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A9A9256B3FEA00CF13F1 /* Category+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,8 +54,8 @@
 		CE56A99D256B383F00CF13F1 /* Payment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE56A99E256B383F00CF13F1 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE56A99F256B383F00CF13F1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE56A9A0256B383F00CF13F1 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CE56A9A1256B383F00CF13F1 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE56A9A8256B3FEA00CF13F1 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE56A9A9256B3FEA00CF13F1 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +72,12 @@
 		CE53735E254F3C97000F2473 = {
 			isa = PBXGroup;
 			children = (
+				CE56A9A8256B3FEA00CF13F1 /* Category+CoreDataClass.swift */,
+				CE56A9A9256B3FEA00CF13F1 /* Category+CoreDataProperties.swift */,
 				CE56A99C256B383F00CF13F1 /* Payment+CoreDataClass.swift */,
 				CE56A99D256B383F00CF13F1 /* Payment+CoreDataProperties.swift */,
 				CE56A99E256B383F00CF13F1 /* User+CoreDataClass.swift */,
 				CE56A99F256B383F00CF13F1 /* User+CoreDataProperties.swift */,
-				CE56A9A0256B383F00CF13F1 /* Category+CoreDataClass.swift */,
-				CE56A9A1256B383F00CF13F1 /* Category+CoreDataProperties.swift */,
 				CE524749256741B7007D5D3E /* UserModel.swift */,
 				CE537369254F3C97000F2473 /* SmartMoney */,
 				CE537368254F3C97000F2473 /* Products */,
@@ -188,9 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4FEA6B254F68CD0003B07F /* MainViewController.swift in Sources */,
-				CE56A9A7256B383F00CF13F1 /* Category+CoreDataProperties.swift in Sources */,
+				CE56A9AB256B3FEA00CF13F1 /* Category+CoreDataProperties.swift in Sources */,
 				CE4FEA73254F69EF0003B07F /* StocksViewController.swift in Sources */,
-				CE56A9A6256B383F00CF13F1 /* Category+CoreDataClass.swift in Sources */,
+				CE56A9AA256B3FEA00CF13F1 /* Category+CoreDataClass.swift in Sources */,
 				CE56A9A5256B383F00CF13F1 /* User+CoreDataProperties.swift in Sources */,
 				CE56A9A3256B383F00CF13F1 /* Payment+CoreDataProperties.swift in Sources */,
 				CE537382254F4433000F2473 /* CreateAccountViewController.swift in Sources */,
