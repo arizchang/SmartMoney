@@ -28,17 +28,16 @@ class MainViewController: UIViewController {
             let limitAmount = (categoryArray![0] as AnyObject).limitAmount!
             category1Label.text = "\(category!): $\(currentAmount)/$\(limitAmount)"
         }
-        if user?.categoryList?.count == 2 {
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if user?.categoryList?.count == 1 {
             let categoryArray = user?.categoryList?.allObjects
             let category = (categoryArray![0] as AnyObject).categoryName!
             let currentAmount = (categoryArray![0] as AnyObject).currentAmount!
             let limitAmount = (categoryArray![0] as AnyObject).limitAmount!
             category1Label.text = "\(category!): $\(currentAmount)/$\(limitAmount)"
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

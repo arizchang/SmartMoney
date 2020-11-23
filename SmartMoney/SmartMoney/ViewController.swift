@@ -19,12 +19,6 @@ class ViewController: UIViewController {
         print(userModel!.getCount())
         //let image = UIImage(named: "blankProfilePic.png")?.pngData()
         //userModel?.add("arizchang", "1234", image!)
-        
-        /*
-        for user in userModel!.userList {
-            userModel?.remove(user)
-        }
-         */
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,5 +35,12 @@ class ViewController: UIViewController {
         }
     }
 
+    // REMOVE THIS WHEN ENTERING PRODUCTION
+    @IBAction func clear(_ sender: Any) {
+        
+        for user in userModel!.userList {
+            userModel?.remove(user)
+        }
+    }
 }
 

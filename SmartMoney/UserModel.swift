@@ -100,6 +100,7 @@ class UserModel {
     }
     
     func editCategory(_ user: User, _ name: String, _ limit: Double) {
+        print("test")
         for category in user.categoryList! {
             let theCategory = category as! Category
             if theCategory.categoryName == name {

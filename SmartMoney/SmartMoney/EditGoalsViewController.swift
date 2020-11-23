@@ -28,13 +28,20 @@ class EditGoalsViewController: UIViewController {
         let name = addCategoryField.text
         let limit = Double(setLimitField.text!)
         userModel?.addCategoryToUser(user!, name!, limit!)
+        addCategoryField.text = ""
+        setLimitField.text = ""
     }
     
     
     @IBAction func remove(_ sender: UIButton) {
     }
     
-    
-    @IBAction func Edit(_ sender: Any) {
+    @IBAction func edit(_ sender: Any) {
+        let name = editCategoryField.text
+        let limit = Double(editSetLimitField.text!)
+        userModel?.editCategory(user!, name!, limit!)
+        editCategoryField.text = ""
+        editSetLimitField.text = ""
+        
     }
 }
