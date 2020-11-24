@@ -32,8 +32,14 @@ class StocksViewController: UIViewController {
 
             //print(jsonResult)
             
+            let metaData = jsonResult["Meta Data"] as! NSDictionary
+            let lastRefreshed = metaData["3. Last Refreshed"] as! String
             let stats = jsonResult["Time Series (Daily)"] as! NSDictionary
-            print(stats)
+            let keys = stats.allKeys
+            let day = stats[lastRefreshed] as! NSDictionary
+            let high = day["2. high"]
+            print("\(lastRefreshed): \(day)")
+            
             
         })
         jsonQuery.resume()
