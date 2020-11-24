@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         print(user?.categoryList?.count)
+        /*
         if user?.categoryList?.count == 1 {
             let categoryArray = user?.categoryList?.allObjects
             let category = (categoryArray![0] as AnyObject).categoryName!
@@ -28,15 +29,50 @@ class MainViewController: UIViewController {
             let limitAmount = (categoryArray![0] as AnyObject).limitAmount!
             category1Label.text = "\(category!): $\(currentAmount)/$\(limitAmount)"
         }
+         */
+        
+        let goalStrings = userModel?.getGoalsStrings(user!)
+        
+        if goalStrings?.count == 1 {
+            category1Label.text = goalStrings![0]
+        }
+        else if goalStrings?.count == 2 {
+            category1Label.text = goalStrings![0]
+            category2Label.text = goalStrings![1]
+        }
+        else if goalStrings?.count == 3 {
+            category1Label.text = goalStrings![0]
+            category2Label.text = goalStrings![1]
+            category3Label.text = goalStrings![2]
+        }
+        else if goalStrings?.count == 4 {
+            category1Label.text = goalStrings![0]
+            category2Label.text = goalStrings![1]
+            category3Label.text = goalStrings![2]
+            category4Label.text = goalStrings![3]
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if user?.categoryList?.count == 1 {
-            let categoryArray = user?.categoryList?.allObjects
-            let category = (categoryArray![0] as AnyObject).categoryName!
-            let currentAmount = (categoryArray![0] as AnyObject).currentAmount!
-            let limitAmount = (categoryArray![0] as AnyObject).limitAmount!
-            category1Label.text = "\(category!): $\(currentAmount)/$\(limitAmount)"
+        let goalStrings = userModel?.getGoalsStrings(user!)
+        
+        if goalStrings?.count == 1 {
+            category1Label.text = goalStrings![0]
+        }
+        else if goalStrings?.count == 2 {
+            category1Label.text = goalStrings![0]
+            category2Label.text = goalStrings![1]
+        }
+        else if goalStrings?.count == 3 {
+            category1Label.text = goalStrings![0]
+            category2Label.text = goalStrings![1]
+            category3Label.text = goalStrings![2]
+        }
+        else if goalStrings?.count == 4 {
+            category1Label.text = goalStrings![0]
+            category2Label.text = goalStrings![1]
+            category3Label.text = goalStrings![2]
+            category4Label.text = goalStrings![3]
         }
     }
     

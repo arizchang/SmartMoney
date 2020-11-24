@@ -110,4 +110,20 @@ class UserModel {
             }
         }
     }
+    
+    func getGoalsStrings(_ user: User) -> [String] {
+        var goalStrings = [String]()
+        
+        let categoryArray = user.categoryList!.allObjects
+        for category in categoryArray {
+            let theCategory = category as AnyObject
+            let name = theCategory.categoryName!
+            let currentAmount = theCategory.currentAmount!
+            let limitAmount = theCategory.limitAmount!
+            let label = "\(name!): $\(currentAmount)/$\(limitAmount)"
+            goalStrings.append(label)
+        }
+        
+        return goalStrings
+    }
 }
