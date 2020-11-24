@@ -85,6 +85,7 @@ class UserModel {
         payment.amount = amount
         payment.category = category
         user.addToPaymentList(payment)
+        updateCurrentAmount(user, category, amount)
         
         try! managedObjectContext.save()
     }
@@ -100,7 +101,6 @@ class UserModel {
     }
     
     func editCategory(_ user: User, _ name: String, _ limit: Double) {
-        print("test")
         for category in user.categoryList! {
             let theCategory = category as! Category
             if theCategory.categoryName == name {
@@ -125,5 +125,15 @@ class UserModel {
         }
         
         return goalStrings
+    }
+    
+    func updateCurrentAmount(_ user: User, _ name: String, _ amount: Double) {
+        for category in user.categoryList! {
+            let theCategory = category as! Category
+            if theCategory.categoryName == name {
+                theCategory.currentAmount += amount
+                try! managedObjectContext.save()
+            }
+        }
     }
 }
