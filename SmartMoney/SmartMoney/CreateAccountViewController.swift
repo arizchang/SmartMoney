@@ -31,6 +31,19 @@ class CreateAccountViewController: UIViewController, UIImagePickerControllerDele
     }
     
     
+    @IBAction func changeProfilePicCamera(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.allowsEditing = false
+            picker.sourceType = UIImagePickerController.SourceType.camera
+            picker.cameraCaptureMode = .photo
+            picker.modalPresentationStyle = .fullScreen
+            present(picker,animated: true,completion: nil)
+        } else {
+            print("No camera")
+        }
+    }
+    
     @IBAction func create(_ sender: UIButton) {
         let username = usernameField.text
         let password = passwordField.text
