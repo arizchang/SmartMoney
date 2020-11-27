@@ -15,6 +15,9 @@ class EditGoalsViewController: UIViewController {
     @IBOutlet weak var removeCategoryField: UITextField!
     @IBOutlet weak var editCategoryField: UITextField!
     @IBOutlet weak var editSetLimitField: UITextField!
+    @IBOutlet weak var addWarning: UILabel!
+    @IBOutlet weak var removeWarning: UILabel!
+    @IBOutlet weak var editWarning: UILabel!
     var user:User?
     var userModel:UserModel?
     
@@ -25,25 +28,48 @@ class EditGoalsViewController: UIViewController {
     
     
     @IBAction func add(_ sender: UIButton) {
-        let name = addCategoryField.text
-        let limit = Double(setLimitField.text!)
-        userModel?.addCategoryToUser(user!, name!, limit!)
-        addCategoryField.text = ""
-        setLimitField.text = ""
+        if addCategoryField.hasText && setLimitField.hasText {
+            let name = addCategoryField.text
+            let limit = Double(setLimitField.text!)
+            let added = userModel?.addCategoryToUser(user!, name!, limit!)
+            if !added! {
+                addWarning.text = "Category Limit (4) Reached"
+            }
+            addCategoryField.text = ""
+            setLimitField.text = ""
+        }
+        else {
+            addWarning.text = "Required Fields Not Filled"
+        }
     }
     
     
     @IBAction func remove(_ sender: UIButton) {
-        userModel?.removeCategory(user!, removeCategoryField.text!)
-        removeCategoryField.text = ""
+        if removeCategoryField.hasText {
+            let removed = userModel?.removeCategory(user!, removeCategoryField.text!)
+            if !removed! {
+                removeWarning.text = "Category Not Found"
+            }
+            removeCategoryField.text = ""
+        }
+        else {
+            removeWarning.text = "Required Fields Not Filled"
+        }
     }
     
     @IBAction func edit(_ sender: Any) {
-        let name = editCategoryField.text
-        let limit = Double(editSetLimitField.text!)
-        userModel?.editCategory(user!, name!, limit!)
-        editCategoryField.text = ""
-        editSetLimitField.text = ""
-        
+        if editCategoryField.hasText && editSetLimitField.hasText{
+            let name = editCategoryField.text
+            let limit = Double(editSetLimitField.text!)
+            let edited = userModel?.editCategory(user!, name!, limit!)
+            if !edited! {
+                editWarning.text = "Category Not Found"
+            }
+            editCategoryField.text = ""
+            editSetLimitField.text = ""
+        }
+        else {
+            editWarning.text = "Required Fields Not Filled"
+        }
     }
 }

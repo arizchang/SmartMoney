@@ -90,18 +90,23 @@ class UserModel {
         try! managedObjectContext.save()
     }
     
-    func addCategoryToUser(_ user: User, _ name: String, _ limit: Double) {
-        var category = Category(context: managedObjectContext)
-        category.categoryName = name
-        category.limitAmount = limit
-        category.currentAmount = 0.00
-        category.over = false
-        user.addToCategoryList(category)
-        
-        try! managedObjectContext.save()
+    func addCategoryToUser(_ user: User, _ name: String, _ limit: Double) -> Bool {
+        if user.categoryList!.count < 4 {
+            var category = Category(context: managedObjectContext)
+            category.categoryName = name
+            category.limitAmount = limit
+            category.currentAmount = 0.00
+            category.over = false
+            user.addToCategoryList(category)
+            try! managedObjectContext.save()
+            return true
+        }
+        else {
+            return false
+        }
     }
     
-    func editCategory(_ user: User, _ name: String, _ limit: Double) {
+    func editCategory(_ user: User, _ name: String, _ limit: Double) -> Bool {
         for category in user.categoryList! {
             let theCategory = category as! Category
             if theCategory.categoryName == name {
@@ -110,18 +115,22 @@ class UserModel {
                     theCategory.over = true
                 }
                 try! managedObjectContext.save()
+                return true
             }
         }
+        return false
     }
     
-    func removeCategory(_ user: User, _ name: String) {
+    func removeCategory(_ user: User, _ name: String) -> Bool {
         for category in user.categoryList! {
             let theCategory = category as! Category
             if theCategory.categoryName == name {
                 user.removeFromCategoryList(theCategory)
                 try! managedObjectContext.save()
+                return true
             }
         }
+        return false
     }
     
     func getGoalsStrings(_ user: User) -> [(String, Bool)] {

@@ -545,6 +545,27 @@
                                     <action selector="add:" destination="S2U-md-Y9k" eventType="touchUpInside" id="B50-3g-tYO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG2-8u-Z2f">
+                                <rect key="frame" x="50" y="292" width="314" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oT-aC-c7q">
+                                <rect key="frame" x="50" y="451" width="314" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00I-zD-2yn">
+                                <rect key="frame" x="50" y="606" width="314" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="I4q-lR-GHi"/>
@@ -552,15 +573,18 @@
                     <navigationItem key="navigationItem" id="y8y-G6-Vau"/>
                     <connections>
                         <outlet property="addCategoryField" destination="uR4-mP-DaM" id="okC-5I-t3f"/>
+                        <outlet property="addWarning" destination="VG2-8u-Z2f" id="uX6-t5-046"/>
                         <outlet property="editCategoryField" destination="K8Z-9e-vez" id="7BK-M1-LwJ"/>
                         <outlet property="editSetLimitField" destination="ohJ-Hp-0ae" id="BFB-Th-Ckr"/>
+                        <outlet property="editWarning" destination="00I-zD-2yn" id="dxH-W5-LSb"/>
                         <outlet property="removeCategoryField" destination="ppu-Iu-G4U" id="sgA-8E-vUD"/>
+                        <outlet property="removeWarning" destination="1oT-aC-c7q" id="5dz-lr-NnT"/>
                         <outlet property="setLimitField" destination="M6l-Gt-712" id="Ipa-Ti-8vc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLw-go-Glv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2827.536231884058" y="-342.39130434782612"/>
+            <point key="canvasLocation" x="2826.0869565217395" y="-342.39130434782612"/>
         </scene>
         <!--Stocks View Controller-->
         <scene sceneID="Jpe-sI-7yp">
