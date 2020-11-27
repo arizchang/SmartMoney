@@ -2,7 +2,7 @@
 //  Category+CoreDataProperties.swift
 //  SmartMoney
 //
-//  Created by Ariz Chang on 11/22/20.
+//  Created by Ariz Chang on 11/27/20.
 //  Copyright © 2020 Ariz Chang. All rights reserved.
 //
 //
@@ -17,9 +17,10 @@ extension Category {
         return NSFetchRequest<Category>(entityName: "Category")
     }
 
+    @NSManaged public var categoryName: String?
     @NSManaged public var currentAmount: Double
     @NSManaged public var limitAmount: Double
-    @NSManaged public var categoryName: String?
+    @NSManaged public var over: Bool
     @NSManaged public var user: User?
 
 }

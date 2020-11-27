@@ -77,13 +77,7 @@ class StocksViewController: UIViewController {
                     self.volLabel.text = ""
                 }
             }
-
-
-            
-            
         })
         jsonQuery.resume()
-
     }
-    
 }

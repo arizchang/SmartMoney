@@ -20,36 +20,65 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(user?.categoryList?.count)
-        /*
-        if user?.categoryList?.count == 1 {
-            let categoryArray = user?.categoryList?.allObjects
-            let category = (categoryArray![0] as AnyObject).categoryName!
-            let currentAmount = (categoryArray![0] as AnyObject).currentAmount!
-            let limitAmount = (categoryArray![0] as AnyObject).limitAmount!
-            category1Label.text = "\(category!): $\(currentAmount)/$\(limitAmount)"
-        }
-         */
-        
         let goalStrings = userModel?.getGoalsStrings(user!)
         
         if goalStrings?.count == 1 {
-            category1Label.text = goalStrings![0]
+            category1Label.textColor = UIColor.green
+            category1Label.text = goalStrings![0].0
+            if goalStrings![0].1 {
+                category1Label.textColor = UIColor.red
+            }
         }
         else if goalStrings?.count == 2 {
-            category1Label.text = goalStrings![0]
-            category2Label.text = goalStrings![1]
+            category1Label.textColor = UIColor.green
+            category2Label.textColor = UIColor.green
+            category1Label.text = goalStrings![0].0
+            category2Label.text = goalStrings![1].0
+            if goalStrings![0].1 {
+                category1Label.textColor = UIColor.red
+            }
+            if goalStrings![1].1 {
+                category2Label.textColor = UIColor.red
+            }
         }
         else if goalStrings?.count == 3 {
-            category1Label.text = goalStrings![0]
-            category2Label.text = goalStrings![1]
-            category3Label.text = goalStrings![2]
+            category1Label.textColor = UIColor.green
+            category2Label.textColor = UIColor.green
+            category3Label.textColor = UIColor.green
+            category1Label.text = goalStrings![0].0
+            category2Label.text = goalStrings![1].0
+            category3Label.text = goalStrings![2].0
+            if goalStrings![0].1 {
+                category1Label.textColor = UIColor.red
+            }
+            if goalStrings![1].1 {
+                category2Label.textColor = UIColor.red
+            }
+            if goalStrings![2].1 {
+                category3Label.textColor = UIColor.red
+            }
         }
         else if goalStrings?.count == 4 {
-            category1Label.text = goalStrings![0]
-            category2Label.text = goalStrings![1]
-            category3Label.text = goalStrings![2]
-            category4Label.text = goalStrings![3]
+            category1Label.textColor = UIColor.green
+            category2Label.textColor = UIColor.green
+            category3Label.textColor = UIColor.green
+            category4Label.textColor = UIColor.green
+            category1Label.text = goalStrings![0].0
+            category2Label.text = goalStrings![1].0
+            category3Label.text = goalStrings![2].0
+            category4Label.text = goalStrings![3].0
+            if goalStrings![0].1 {
+                category1Label.textColor = UIColor.red
+            }
+            if goalStrings![1].1 {
+                category2Label.textColor = UIColor.red
+            }
+            if goalStrings![2].1 {
+                category3Label.textColor = UIColor.red
+            }
+            if goalStrings![3].1 {
+                category4Label.textColor = UIColor.red
+            }
         }
     }
     
@@ -57,22 +86,62 @@ class MainViewController: UIViewController {
         let goalStrings = userModel?.getGoalsStrings(user!)
         
         if goalStrings?.count == 1 {
-            category1Label.text = goalStrings![0]
+            category1Label.textColor = UIColor.green
+            category1Label.text = goalStrings![0].0
+            if goalStrings![0].1 {
+                category1Label.textColor = UIColor.red
+            }
         }
         else if goalStrings?.count == 2 {
-            category1Label.text = goalStrings![0]
-            category2Label.text = goalStrings![1]
+            category1Label.textColor = UIColor.green
+            category2Label.textColor = UIColor.green
+            category1Label.text = goalStrings![0].0
+            category2Label.text = goalStrings![1].0
+            if goalStrings![0].1 {
+                category1Label.textColor = UIColor.red
+            }
+            if goalStrings![1].1 {
+                category2Label.textColor = UIColor.red
+            }
         }
         else if goalStrings?.count == 3 {
-            category1Label.text = goalStrings![0]
-            category2Label.text = goalStrings![1]
-            category3Label.text = goalStrings![2]
+            category1Label.textColor = UIColor.green
+            category2Label.textColor = UIColor.green
+            category3Label.textColor = UIColor.green
+            category1Label.text = goalStrings![0].0
+            category2Label.text = goalStrings![1].0
+            category3Label.text = goalStrings![2].0
+            if goalStrings![0].1 {
+                category1Label.textColor = UIColor.red
+            }
+            if goalStrings![1].1 {
+                category2Label.textColor = UIColor.red
+            }
+            if goalStrings![2].1 {
+                category3Label.textColor = UIColor.red
+            }
         }
         else if goalStrings?.count == 4 {
-            category1Label.text = goalStrings![0]
-            category2Label.text = goalStrings![1]
-            category3Label.text = goalStrings![2]
-            category4Label.text = goalStrings![3]
+            category1Label.textColor = UIColor.green
+            category2Label.textColor = UIColor.green
+            category3Label.textColor = UIColor.green
+            category4Label.textColor = UIColor.green
+            category1Label.text = goalStrings![0].0
+            category2Label.text = goalStrings![1].0
+            category3Label.text = goalStrings![2].0
+            category4Label.text = goalStrings![3].0
+            if goalStrings![0].1 {
+                category1Label.textColor = UIColor.red
+            }
+            if goalStrings![1].1 {
+                category2Label.textColor = UIColor.red
+            }
+            if goalStrings![2].1 {
+                category3Label.textColor = UIColor.red
+            }
+            if goalStrings![3].1 {
+                category4Label.textColor = UIColor.red
+            }
         }
     }
     

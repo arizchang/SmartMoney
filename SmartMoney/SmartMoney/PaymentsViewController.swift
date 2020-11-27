@@ -39,6 +39,7 @@ class PaymentsViewController: UIViewController, UITableViewDelegate, UITableView
         for payment in user!.paymentList! {
             user!.removeFromPaymentList(payment as! Payment)
         }
+        userModel!.clearCurrentAmounts(user!)
         
         paymentTable.reloadData()
     }

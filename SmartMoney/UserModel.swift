@@ -95,6 +95,7 @@ class UserModel {
         category.categoryName = name
         category.limitAmount = limit
         category.currentAmount = 0.00
+        category.over = false
         user.addToCategoryList(category)
         
         try! managedObjectContext.save()
@@ -105,14 +106,16 @@ class UserModel {
             let theCategory = category as! Category
             if theCategory.categoryName == name {
                 theCategory.limitAmount = limit
-                
+                if theCategory.currentAmount > theCategory.limitAmount {
+                    theCategory.over = true
+                }
                 try! managedObjectContext.save()
             }
         }
     }
     
-    func getGoalsStrings(_ user: User) -> [String] {
-        var goalStrings = [String]()
+    func getGoalsStrings(_ user: User) -> [(String, Bool)] {
+        var goalStrings = [(String, Bool)]()
         
         let categoryArray = user.categoryList!.allObjects
         for category in categoryArray {
@@ -121,7 +124,7 @@ class UserModel {
             let currentAmount = theCategory.currentAmount!
             let limitAmount = theCategory.limitAmount!
             let label = "\(name!): $\(currentAmount)/$\(limitAmount)"
-            goalStrings.append(label)
+            goalStrings.append((label, theCategory.over))
         }
         
         return goalStrings
@@ -132,8 +135,23 @@ class UserModel {
             let theCategory = category as! Category
             if theCategory.categoryName == name {
                 theCategory.currentAmount += amount
+                if theCategory.currentAmount > theCategory.limitAmount {
+                    theCategory.over = true
+                }
+                else {
+                    theCategory.over = false
+                }
                 try! managedObjectContext.save()
             }
+        }
+    }
+    
+    func clearCurrentAmounts(_ user: User) {
+        for category in user.categoryList! {
+            let theCategory = category as! Category
+            theCategory.currentAmount = 0
+            theCategory.over = false
+            try! managedObjectContext.save()
         }
     }
 }
