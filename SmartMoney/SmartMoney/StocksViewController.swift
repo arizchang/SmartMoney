@@ -10,10 +10,22 @@ import UIKit
 
 class StocksViewController: UIViewController {
 
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var openLabel: UILabel!
+    @IBOutlet weak var highLabel: UILabel!
+    @IBOutlet weak var lowLabel: UILabel!
+    @IBOutlet weak var closeLabel: UILabel!
+    @IBOutlet weak var volLabel: UILabel!
+    @IBOutlet weak var stockField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let urlAsString = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=TWTCTGJAOKK0YG93"
+    }
+        
+    @IBAction func search(_ sender: UIButton) {
+        let stock = stockField.text
+        print(stock)
+        let urlAsString = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=\(stock!)&apikey=TWTCTGJAOKK0YG93"
         
         let url = URL(string: urlAsString)!
         let urlSession = URLSession.shared
@@ -37,13 +49,25 @@ class StocksViewController: UIViewController {
             let stats = jsonResult["Time Series (Daily)"] as! NSDictionary
             let keys = stats.allKeys
             let day = stats[lastRefreshed] as! NSDictionary
+            let open = day["1. open"]
             let high = day["2. high"]
+            let low = day["3. low"]
+            let close = day["4. close"]
+            let volume = day["5. volume"]
             print("\(lastRefreshed): \(day)")
+            
+            DispatchQueue.main.async {
+                self.date.text = "\(lastRefreshed): "
+                self.openLabel.text = "Open: $\(open!)"
+                self.highLabel.text = "High: $\(high!)"
+                self.lowLabel.text = "Low: $\(low!)"
+                self.closeLabel.text = "Close: $\(close!)"
+                self.volLabel.text = "Volume: \(volume!)"
+            }
             
             
         })
         jsonQuery.resume()
     }
-        
-
+    
 }
