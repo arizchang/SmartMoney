@@ -34,6 +34,8 @@ class EditGoalsViewController: UIViewController {
     
     
     @IBAction func remove(_ sender: UIButton) {
+        userModel?.removeCategory(user!, removeCategoryField.text!)
+        removeCategoryField.text = ""
     }
     
     @IBAction func edit(_ sender: Any) {

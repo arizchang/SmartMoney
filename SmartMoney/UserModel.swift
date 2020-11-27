@@ -114,6 +114,16 @@ class UserModel {
         }
     }
     
+    func removeCategory(_ user: User, _ name: String) {
+        for category in user.categoryList! {
+            let theCategory = category as! Category
+            if theCategory.categoryName == name {
+                user.removeFromCategoryList(theCategory)
+                try! managedObjectContext.save()
+            }
+        }
+    }
+    
     func getGoalsStrings(_ user: User) -> [(String, Bool)] {
         var goalStrings = [(String, Bool)]()
         

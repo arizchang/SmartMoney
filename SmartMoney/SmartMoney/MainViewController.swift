@@ -20,8 +20,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        category1Label.text = "Unused Category"
+        category2Label.text = "Unused Category"
+        category3Label.text = "Unused Category"
+        category4Label.text = "Unused Category"
         let goalStrings = userModel?.getGoalsStrings(user!)
-        
+        print(goalStrings!.count)
         if goalStrings?.count == 1 {
             category1Label.textColor = UIColor.green
             category1Label.text = goalStrings![0].0
@@ -83,8 +87,12 @@ class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        category1Label.text = "Unused Category"
+        category2Label.text = "Unused Category"
+        category3Label.text = "Unused Category"
+        category4Label.text = "Unused Category"
         let goalStrings = userModel?.getGoalsStrings(user!)
-        
+        print(goalStrings!.count)
         if goalStrings?.count == 1 {
             category1Label.textColor = UIColor.green
             category1Label.text = goalStrings![0].0
