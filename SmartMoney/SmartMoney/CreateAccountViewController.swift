@@ -41,21 +41,28 @@ class CreateAccountViewController: UIViewController, UIImagePickerControllerDele
             present(picker,animated: true,completion: nil)
         } else {
             print("No camera")
+            warningLabel.text = "No Camera"
         }
     }
     
     @IBAction func create(_ sender: UIButton) {
-        let username = usernameField.text
-        let password = passwordField.text
-        let picture = profilePic.image?.pngData()
-        newUser = userModel?.add(username!, password!, picture!)
+        if usernameField.hasText && passwordField.hasText {
+            let username = usernameField.text
+            let password = passwordField.text
+            let picture = profilePic.image?.pngData()
+            newUser = userModel?.add(username!, password!, picture!)
 
-        if newUser != nil {
-            warningLabel.text = "Successfully Created!"
+            if newUser != nil {
+                warningLabel.text = "Successfully Created!"
+            }
+            else {
+                warningLabel.text = "That username is taken!"
+            }
         }
         else {
-            warningLabel.text = "That username is taken!"
+            warningLabel.text = "Required Fields Not Filled"
         }
+
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){

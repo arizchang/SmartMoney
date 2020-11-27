@@ -80,14 +80,20 @@ class UserModel {
         return false
     }
     
-    func addPaymentToUser(_ user:User, _ category:String, _ amount: Double) {
+    func addPaymentToUser(_ user:User, _ categoryName:String, _ amount: Double) -> Bool {
         var payment = Payment(context: managedObjectContext)
         payment.amount = amount
-        payment.category = category
-        user.addToPaymentList(payment)
-        updateCurrentAmount(user, category, amount)
-        
-        try! managedObjectContext.save()
+        payment.category = categoryName
+        for category in user.categoryList! {
+            let theCategory = category as! Category
+            if categoryName == theCategory.categoryName {
+                user.addToPaymentList(payment)
+                updateCurrentAmount(user, categoryName, amount)
+                try! managedObjectContext.save()
+                return true
+            }
+        }
+        return false
     }
     
     func addCategoryToUser(_ user: User, _ name: String, _ limit: Double) -> Bool {
