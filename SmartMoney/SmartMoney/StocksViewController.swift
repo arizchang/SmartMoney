@@ -42,32 +42,48 @@ class StocksViewController: UIViewController {
                 print("JSON Error \(err!.localizedDescription)")
             }
 
-            //print(jsonResult)
-            
-            let metaData = jsonResult["Meta Data"] as! NSDictionary
-            let lastRefreshed = metaData["3. Last Refreshed"] as! String
-            let stats = jsonResult["Time Series (Daily)"] as! NSDictionary
-            let keys = stats.allKeys
-            let day = stats[lastRefreshed] as! NSDictionary
-            let open = day["1. open"]
-            let high = day["2. high"]
-            let low = day["3. low"]
-            let close = day["4. close"]
-            let volume = day["5. volume"]
-            print("\(lastRefreshed): \(day)")
-            
-            DispatchQueue.main.async {
-                self.date.text = "\(lastRefreshed): "
-                self.openLabel.text = "Open: $\(open!)"
-                self.highLabel.text = "High: $\(high!)"
-                self.lowLabel.text = "Low: $\(low!)"
-                self.closeLabel.text = "Close: $\(close!)"
-                self.volLabel.text = "Volume: \(volume!)"
+            print(jsonResult["Meta Data"])
+            if jsonResult["Meta Data"] != nil {
+                let metaData = jsonResult["Meta Data"] as! NSDictionary
+                let lastRefreshed = metaData["3. Last Refreshed"] as! String
+                let stats = jsonResult["Time Series (Daily)"] as! NSDictionary
+                let keys = stats.allKeys
+                let day = stats[lastRefreshed] as! NSDictionary
+                let open = day["1. open"]
+                let high = day["2. high"]
+                let low = day["3. low"]
+                let close = day["4. close"]
+                let volume = day["5. volume"]
+                print("\(lastRefreshed): \(day)")
+                
+                DispatchQueue.main.async {
+                    self.date.text = "\(lastRefreshed): "
+                    self.date.textColor = UIColor.green
+                    self.openLabel.text = "Open: $\(open!)"
+                    self.highLabel.text = "High: $\(high!)"
+                    self.lowLabel.text = "Low: $\(low!)"
+                    self.closeLabel.text = "Close: $\(close!)"
+                    self.volLabel.text = "Volume: \(volume!)"
+                }
             }
+            else {
+                DispatchQueue.main.async {
+                    self.date.text = "Invalid Stock Symbol"
+                    self.date.textColor = UIColor.red
+                    self.openLabel.text = ""
+                    self.highLabel.text = ""
+                    self.lowLabel.text = ""
+                    self.closeLabel.text = ""
+                    self.volLabel.text = ""
+                }
+            }
+
+
             
             
         })
         jsonQuery.resume()
+
     }
     
 }
