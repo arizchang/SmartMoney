@@ -35,6 +35,9 @@ class EditGoalsViewController: UIViewController {
             if !added! {
                 addWarning.text = "Category Limit (4) Reached"
             }
+            else {
+                addWarning.text = ""
+            }
             addCategoryField.text = ""
             setLimitField.text = ""
         }
@@ -50,6 +53,9 @@ class EditGoalsViewController: UIViewController {
             if !removed! {
                 removeWarning.text = "Category Not Found"
             }
+            else {
+                removeWarning.text = ""
+            }
             removeCategoryField.text = ""
         }
         else {
@@ -64,6 +70,9 @@ class EditGoalsViewController: UIViewController {
             let edited = userModel?.editCategory(user!, name!, limit!)
             if !edited! {
                 editWarning.text = "Category Not Found"
+            }
+            else {
+                editWarning.text = ""
             }
             editCategoryField.text = ""
             editSetLimitField.text = ""
