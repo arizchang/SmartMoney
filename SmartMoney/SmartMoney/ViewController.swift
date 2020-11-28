@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var picture: UIImageView!
     var userModel:UserModel?
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -17,6 +18,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         userModel = UserModel(managedObjectContext)
         print(userModel!.getCount())
+        picture.image = UIImage(named: "money.jpg")
+        for user in userModel!.userList {
+            let theUser = user as! User
+            print(theUser.password)
+        }
         //let image = UIImage(named: "blankProfilePic.png")?.pngData()
         //userModel?.add("arizchang", "1234", image!)
     }
