@@ -13,7 +13,6 @@
 		CE4FEA71254F69E40003B07F /* BankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA70254F69E40003B07F /* BankViewController.swift */; };
 		CE4FEA73254F69EF0003B07F /* StocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FEA72254F69EF0003B07F /* StocksViewController.swift */; };
 		CE52474A256741B7007D5D3E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE524749256741B7007D5D3E /* UserModel.swift */; };
-		CE52474C2567465B007D5D3E /* blankProfilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = CE52474B2567465B007D5D3E /* blankProfilePic.png */; };
 		CE53736B254F3C97000F2473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53736A254F3C97000F2473 /* AppDelegate.swift */; };
 		CE53736D254F3C97000F2473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53736C254F3C97000F2473 /* SceneDelegate.swift */; };
 		CE53736F254F3C97000F2473 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53736E254F3C97000F2473 /* ViewController.swift */; };
@@ -23,13 +22,14 @@
 		CE53737A254F3C98000F2473 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE537378254F3C98000F2473 /* LaunchScreen.storyboard */; };
 		CE537382254F4433000F2473 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE537381254F4433000F2473 /* CreateAccountViewController.swift */; };
 		CE537384254F44D2000F2473 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE537383254F44D2000F2473 /* LogInViewController.swift */; };
+		CE568B632572F87D00D9678F /* money.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE568B622572F87D00D9678F /* money.jpg */; };
+		CE568B652572F8D400D9678F /* blankProfilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = CE568B642572F8D400D9678F /* blankProfilePic.png */; };
 		CE56A9A2256B383F00CF13F1 /* Payment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99C256B383F00CF13F1 /* Payment+CoreDataClass.swift */; };
 		CE56A9A3256B383F00CF13F1 /* Payment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99D256B383F00CF13F1 /* Payment+CoreDataProperties.swift */; };
 		CE56A9A4256B383F00CF13F1 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99E256B383F00CF13F1 /* User+CoreDataClass.swift */; };
 		CE56A9A5256B383F00CF13F1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A99F256B383F00CF13F1 /* User+CoreDataProperties.swift */; };
 		CE5766CF2571818600D8E4A0 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5766CD2571818600D8E4A0 /* Category+CoreDataClass.swift */; };
 		CE5766D02571818600D8E4A0 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5766CE2571818600D8E4A0 /* Category+CoreDataProperties.swift */; };
-		CE57D2852571E7C00003A9C5 /* money.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE57D2842571E7C00003A9C5 /* money.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,6 @@
 		CE4FEA70254F69E40003B07F /* BankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewController.swift; sourceTree = "<group>"; };
 		CE4FEA72254F69EF0003B07F /* StocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewController.swift; sourceTree = "<group>"; };
 		CE524749256741B7007D5D3E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		CE52474B2567465B007D5D3E /* blankProfilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blankProfilePic.png; path = ../blankProfilePic.png; sourceTree = "<group>"; };
 		CE537367254F3C97000F2473 /* SmartMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE53736A254F3C97000F2473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE53736C254F3C97000F2473 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,13 +50,14 @@
 		CE53737B254F3C98000F2473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE537381254F4433000F2473 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		CE537383254F44D2000F2473 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		CE568B622572F87D00D9678F /* money.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = money.jpg; sourceTree = "<group>"; };
+		CE568B642572F8D400D9678F /* blankProfilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blankProfilePic.png; sourceTree = "<group>"; };
 		CE56A99C256B383F00CF13F1 /* Payment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE56A99D256B383F00CF13F1 /* Payment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE56A99E256B383F00CF13F1 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE56A99F256B383F00CF13F1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE5766CD2571818600D8E4A0 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE5766CE2571818600D8E4A0 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE57D2842571E7C00003A9C5 /* money.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = money.jpg; path = ../money.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +74,8 @@
 		CE53735E254F3C97000F2473 = {
 			isa = PBXGroup;
 			children = (
+				CE568B622572F87D00D9678F /* money.jpg */,
+				CE568B642572F8D400D9678F /* blankProfilePic.png */,
 				CE5766CD2571818600D8E4A0 /* Category+CoreDataClass.swift */,
 				CE5766CE2571818600D8E4A0 /* Category+CoreDataProperties.swift */,
 				CE56A99C256B383F00CF13F1 /* Payment+CoreDataClass.swift */,
@@ -83,8 +85,6 @@
 				CE524749256741B7007D5D3E /* UserModel.swift */,
 				CE537369254F3C97000F2473 /* SmartMoney */,
 				CE537368254F3C97000F2473 /* Products */,
-				CE52474B2567465B007D5D3E /* blankProfilePic.png */,
-				CE57D2842571E7C00003A9C5 /* money.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,11 +176,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE568B652572F8D400D9678F /* blankProfilePic.png in Resources */,
+				CE568B632572F87D00D9678F /* money.jpg in Resources */,
 				CE53737A254F3C98000F2473 /* LaunchScreen.storyboard in Resources */,
-				CE57D2852571E7C00003A9C5 /* money.jpg in Resources */,
 				CE537377254F3C98000F2473 /* Assets.xcassets in Resources */,
 				CE537372254F3C97000F2473 /* Main.storyboard in Resources */,
-				CE52474C2567465B007D5D3E /* blankProfilePic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
