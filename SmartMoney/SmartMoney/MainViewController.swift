@@ -24,6 +24,10 @@ class MainViewController: UIViewController {
         category2Label.text = "Unused Category"
         category3Label.text = "Unused Category"
         category4Label.text = "Unused Category"
+        category1Label.textColor = UIColor.green
+        category2Label.textColor = UIColor.green
+        category3Label.textColor = UIColor.green
+        category4Label.textColor = UIColor.green
         let goalStrings = userModel?.getGoalsStrings(user!)
         print(goalStrings!.count)
         if goalStrings?.count == 1 {
@@ -91,6 +95,10 @@ class MainViewController: UIViewController {
         category2Label.text = "Unused Category"
         category3Label.text = "Unused Category"
         category4Label.text = "Unused Category"
+        category1Label.textColor = UIColor.green
+        category2Label.textColor = UIColor.green
+        category3Label.textColor = UIColor.green
+        category4Label.textColor = UIColor.green
         let goalStrings = userModel?.getGoalsStrings(user!)
         print(goalStrings!.count)
         if goalStrings?.count == 1 {

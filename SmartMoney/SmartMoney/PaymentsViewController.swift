@@ -21,7 +21,6 @@ class PaymentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(user!.paymentList!.count)
     }
 
     @IBAction func addPayment(_ sender: UIButton) {

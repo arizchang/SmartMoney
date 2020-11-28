@@ -19,12 +19,6 @@ class ViewController: UIViewController {
         userModel = UserModel(managedObjectContext)
         print(userModel!.getCount())
         picture.image = UIImage(named: "money.jpg")
-        for user in userModel!.userList {
-            let theUser = user as! User
-            print(theUser.password)
-        }
-        //let image = UIImage(named: "blankProfilePic.png")?.pngData()
-        //userModel?.add("arizchang", "1234", image!)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,11 +36,12 @@ class ViewController: UIViewController {
     }
 
     // REMOVE THIS WHEN ENTERING PRODUCTION
+    /*
     @IBAction func clear(_ sender: Any) {
-        
         for user in userModel!.userList {
             userModel?.remove(user)
         }
     }
+ */
 }
 
